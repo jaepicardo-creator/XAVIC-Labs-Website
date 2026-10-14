@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "kath",
+    "name": "K.A.T.H.",
+    "fullName": "Kinetic Automated Thinking Helper",
+    "category": "Personal AI Companion",
+    "description": "A private, adaptive, proactive, voice-first AI companion designed for natural conversations, personal assistance, memory, and authorized task execution.",
+    "platform": "Android",
+    "status": "Active Development",
+    "priority": "Flagship Project",
+    "tagline": "Your Private AI Companion.",
+    "slogan": "More Than an Assistant. A Partner.",
+    "color": "cyan"
+  },
+  {
+    "slug": "aria",
+    "name": "A.R.I.A.",
+    "fullName": "Adaptive Responsive Intelligent Assistant",
+    "category": "Intelligent Personal Assistant",
+    "description": "A Python-based personal assistant focused on productivity, reminders, scheduling, voice interaction, and practical automation.",
+    "status": "Active Development",
+    "color": "violet"
+  },
+  {
+    "slug": "xavic",
+    "name": "XAVIC",
+    "fullName": "eXperimental Autonomous Virtual Intelligence Core",
+    "category": "Commercial AI and Automation",
+    "description": "An experimental AI platform intended for future organizational and business automation solutions.",
+    "status": "Research and Planning",
+    "color": "cyan"
+  },
+  {
+    "slug": "zyro",
+    "name": "Zyro",
+    "category": "Interactive AI Companion",
+    "description": "A personality-driven virtual dragon companion designed for Android, featuring expressive interactions and a distinctive voxel-inspired character design.",
+    "platform": "Android",
+    "status": "Concept Development",
+    "color": "violet"
+  },
+  {
+    "slug": "jae",
+    "name": "Jae",
+    "category": "Personal Development",
+    "description": "A personal physical development initiative focused on fitness, calisthenics, nutrition, and long-term progress.",
+    "status": "Active Personal Initiative",
+    "color": "green"
+  }
+]
