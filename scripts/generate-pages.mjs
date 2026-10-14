@@ -20,6 +20,7 @@ for (const project of projects) {
   await mkdir(directory, { recursive: true });
   const html = rootHtml
     .replaceAll("./assets/", "../../assets/")
+    .replaceAll('href="./xavic-emblem.svg"', 'href="../../xavic-emblem.svg"')
     .replace(
       /<title>[\s\S]*?<\/title>/,
       `<title>${escape(project.name)} | XAVIC-Labs</title>`,

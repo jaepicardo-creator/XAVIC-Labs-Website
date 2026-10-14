@@ -6,6 +6,12 @@ Official website for **XAVIC-Labs — eXperimental Autonomous Virtual Intelligen
 
 Founded and led by **Jae Picardo**. The laboratory researches intelligent digital assistants, automation, and human-AI collaboration, prioritizing adaptability, practical functionality, user control, and responsible automation.
 
+## V1.1 visual identity
+
+The shared geometric SVG emblem in `public/xavic-emblem.svg` is used by the wordmark and favicon. The orbital AI core uses CSS transform/opacity animations and frame-throttled desktop pointer movement. Touch devices retain automatic lightweight animation; reduced-motion preferences disable cursor movement, orbit animation, pulse, and animated glow. Animation pauses when the core is off-screen or the document is hidden.
+
+Secondary text, technical labels, navigation, and mobile descriptions are easier to read while retaining the established layout and dark palette. Browser checks sample secondary text contrast against a conservative dark backdrop; these checks are not a complete WCAG accessibility audit. No dependencies, project information, contact delivery, or website sections were added or removed in this update.
+
 ## Stack and setup
 
 React + Vite + TypeScript + Tailwind CSS v4. Lucide provides decorative icons; CSS provides the core and scroll animations without an animation-library dependency. Use Node.js 24 LTS and npm 11 (validated with Node 24.19.0 and npm 11.9.0).

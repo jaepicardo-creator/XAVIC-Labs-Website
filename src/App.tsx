@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
-import { Orbit, ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+import AICore from "./components/AICore";
+import BrandEmblem from "./components/BrandEmblem";
 import Header from "./components/Header";
 import SectionTitle from "./components/SectionTitle";
 import ProjectCard from "./components/ProjectCard";
@@ -98,20 +100,7 @@ export default function App() {
               <span className="divider">/</span> ONE IDEA AT A TIME
             </div>
           </div>
-          <div className="hero-art" aria-hidden="true">
-            <div className="art-grid" />
-            <div className="orbit orbit-one" />
-            <div className="orbit orbit-two" />
-            <div className="orbit orbit-three" />
-            <div className="core">
-              <Orbit size={92} strokeWidth={0.7} />
-            </div>
-            <span className="art-label label-top">X / EXPERIMENTAL CORE</span>
-            <span className="art-label label-bottom">
-              AI CORE / VISUAL <span className="status-dot" />
-            </span>
-            <span className="coordinate">XAVIC / NEURAL STUDY</span>
-          </div>
+          <AICore />
         </section>
         <div className="ticker">
           <div className="container">
@@ -351,7 +340,8 @@ export default function App() {
       </main>
       <footer className="container footer">
         <a className="brand" href="#">
-          <span className="brand-mark">X</span>XAVIC
+          <BrandEmblem />
+          XAVIC
           <span className="muted">/ LABS</span>
         </a>
         <span>© {new Date().getFullYear()} XAVIC-Labs</span>

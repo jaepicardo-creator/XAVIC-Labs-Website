@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs><linearGradient id="xavic-spectrum" x1="3" y1="3" x2="29" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#6cecf0"/><stop offset=".5" stop-color="#64aaff"/><stop offset="1" stop-color="#ad8cff"/></linearGradient></defs>
+  <g fill="url(#xavic-spectrum)">
+    <path d="M3 3h6l7 9-4 4L3 5V3Zm17 13 9 11v2h-6l-7-9 4-4Z"/>
+    <path d="M23 3h6v2L20 16l-4-4 7-9ZM12 16l4 4-7 9H3v-2l9-11Z"/>
+    <path d="m16 13 3 3-3 3-3-3 3-3Z"/>
+  </g>
+</svg>
