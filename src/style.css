@@ -1262,3 +1262,170 @@ p {
 .project-branding + .project-page {
   padding-top: 28px;
 }
+
+/* V1.3: scoped laboratory atmosphere, headline entrance, and hero controls. */
+.hero {
+  position: relative;
+  isolation: isolate;
+}
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+.hero::before {
+  background:
+    radial-gradient(ellipse at 75% 40%, #57e4e80a, transparent 55%),
+    radial-gradient(ellipse at 40% 75%, #9585f508, transparent 60%);
+  animation: hero-atmosphere 18s ease-in-out infinite;
+}
+.hero::after {
+  background-image:
+    linear-gradient(#77b4d008 1px, transparent 1px),
+    linear-gradient(90deg, #77b4d008 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse at 80% 45%, black, transparent 70%);
+}
+.hero h1 {
+  animation: hero-intro 0.75s ease-out both;
+  line-height: 1.12;
+}
+.hero-copy > p {
+  max-width: 455px;
+}
+.hero-actions {
+  flex-wrap: wrap;
+  row-gap: 14px;
+}
+.hero-actions .button {
+  border-radius: 2px;
+  transition:
+    background 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.hero-actions .button:hover {
+  box-shadow: 0 0 20px #57e4e817;
+}
+.hero-actions .text-link {
+  padding: 12px 0;
+  border-bottom: 1px solid transparent;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+.hero-actions .text-link:hover {
+  border-color: #57e4e85c;
+}
+.hero-actions a:focus-visible {
+  outline: 2px solid #eaf2ff;
+  outline-offset: 5px;
+}
+.hero-art {
+  contain: layout;
+}
+.hero-art .orbital-data-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  animation: orbital-data 22s linear infinite;
+}
+.hero-art .orbital-point {
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a5f0f3;
+  box-shadow: 0 0 8px #57e4e844;
+}
+.hero-art .orbit-two .orbital-data-track {
+  animation-duration: 29s;
+  animation-direction: reverse;
+}
+.hero-art .orbit-two .orbital-point {
+  background: #b4a8f8;
+}
+.hero-art .orbit-three .orbital-data-track {
+  animation-duration: 36s;
+}
+.hero-art .orbit-three .orbital-point {
+  width: 4px;
+  height: 4px;
+  background: #84aeef;
+}
+.hero-art[data-interacting="true"] .interaction-glow {
+  opacity: var(--core-energy, 0.5);
+}
+.hero-art .label-bottom {
+  color: #a7c9cf;
+}
+@keyframes hero-intro {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hero-atmosphere {
+  0%,
+  100% {
+    opacity: 0.65;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes orbital-data {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (min-width: 701px) and (max-width: 1100px) {
+  .hero h1 {
+    font-size: clamp(34px, 4.3vw, 47px);
+    letter-spacing: -1.8px;
+  }
+}
+@media (max-width: 700px) {
+  .hero-actions {
+    gap: 12px 18px;
+  }
+  .hero-actions .button {
+    gap: 12px;
+    padding-inline: 17px;
+  }
+  .hero-actions .text-link {
+    gap: 9px;
+  }
+}
+@media (max-width: 350px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero-actions .button {
+    width: 100%;
+  }
+  .hero-actions .text-link {
+    padding-block: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .hero::before,
+  .hero-art .orbital-data-track {
+    animation: none !important;
+  }
+  .hero h1 {
+    opacity: 1;
+    transform: none;
+  }
+}

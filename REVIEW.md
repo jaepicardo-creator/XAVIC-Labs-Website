@@ -1,4 +1,4 @@
-# XAVIC-Labs V1.2 implementation review
+# XAVIC-Labs V1.3 implementation review
 
 Branch: `development/xavic-website`, based on `main` commit `ffdfe58e43d80954a15f3f719fe591773c222147`.
 
@@ -47,3 +47,11 @@ Replaces the provisional V1.1 emblem with a manual silhouette trace of the Found
 Validation: all 13 automated tests passed, production build generated all five static project pages, and browser checks passed. Branding inspection covered all six pages at 1440px, 768px, 390px, and 320px, loaded SVG/PNG favicons, 16/32/64/256px rendering, two accessible home links per page, and zero overflow or console/runtime/HTTP errors. Existing core interaction, animation preferences, navigation, and disabled contact preview passed unchanged. No dependencies or project data changed.
 
 V1.2 commits only branding assets, branding components/integration, branding-specific tests/generation, release version metadata, and documentation. Previous screenshots/ZIP remain untracked. A normal push updates Draft PR #1; no merge or public deployment is authorized.
+
+## V1.3 hero refinement
+
+Hero-only visual changes: official tagline retained, requested supporting description, refined CTA labels/focus/spacing, subtle headline entrance, grid/ambient lighting, orbiting data points, variable interaction glow, and decorative system status. The official SVG/PNG assets, project data/pages, other homepage sections, and contact logic are unchanged. No dependencies added.
+
+Validation: 13 automated tests; strict TypeScript/Vite build; all five project routes/reloads/return links; pointer/reset/off-screen pause; touch autoplay; reduced motion; contact preview; sampled contrast; and zero console/runtime/HTTP errors passed. Hero-specific checks passed at 1440px, 1024px, 390px, and 320px with no overlapping content/controls, no horizontal overflow, and zero observed layout shift. New data tracks demonstrably animate and pause off-screen. CTA keyboard focus and navigation work; reduced motion disables headline/atmosphere/data animation.
+
+Changed files: README.md, REVIEW.md, package.json, package-lock.json, src/App.tsx, src/App.test.tsx, src/components/AICore.tsx, src/components/AICore.test.tsx, src/style.css, scripts/browser-smoke.mjs, and new scripts/hero-smoke.mjs. Existing screenshot/ZIP inspection artifacts remain untracked and excluded from the commit. Normal development-branch push only; no merge or deployment.

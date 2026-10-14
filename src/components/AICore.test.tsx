@@ -32,11 +32,17 @@ describe("AI core interaction preferences", () => {
     const art = container.querySelector(".hero-art")!;
     move(art);
     expect(art).toHaveAttribute("data-interacting", "true");
+    expect(
+      Number((art as HTMLElement).style.getPropertyValue("--core-energy")),
+    ).toBeGreaterThan(0.2);
     expect(container.querySelector(".orbital-stage")).toHaveStyle(
       "--core-x: 6.4px",
     );
     fireEvent.pointerLeave(art);
     expect(art).not.toHaveAttribute("data-interacting");
+    expect((art as HTMLElement).style.getPropertyValue("--core-energy")).toBe(
+      "",
+    );
     expect(
       (
         container.querySelector(".orbital-stage") as HTMLElement
@@ -52,6 +58,9 @@ describe("AI core interaction preferences", () => {
     const art = container.querySelector(".hero-art")!;
     move(art);
     expect(art).not.toHaveAttribute("data-interacting");
+    expect((art as HTMLElement).style.getPropertyValue("--core-energy")).toBe(
+      "",
+    );
     expect(
       (
         container.querySelector(".orbital-stage") as HTMLElement

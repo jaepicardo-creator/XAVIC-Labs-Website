@@ -69,13 +69,13 @@ export default function App() {
       </a>
       <Header />
       <main id="main">
-        <section className="hero container">
+        <section className="hero container" aria-labelledby="hero-heading">
           <div className="hero-copy">
             <div className="eyebrow">
               <span className="status-dot" /> eXperimental Autonomous Virtual
               Intelligence Core
             </div>
-            <h1>
+            <h1 id="hero-heading">
               One Vision.
               <br />
               <span>Intelligent Systems.</span>
@@ -83,8 +83,8 @@ export default function App() {
               Endless Possibilities.
             </h1>
             <p>
-              An independent AI development laboratory researching intelligent,
-              adaptive, and practical systems that improve productivity,
+              An independent AI development laboratory engineering intelligent,
+              adaptive, and practical systems that enhance productivity,
               creativity, and everyday life.
             </p>
             <div className="hero-actions">
@@ -92,7 +92,7 @@ export default function App() {
                 Explore Projects <ArrowUpRight size={18} />
               </a>
               <a className="text-link" href="#about">
-                About the lab <ArrowRight size={17} />
+                Discover the Lab <ArrowRight size={17} />
               </a>
             </div>
             <div className="hero-foot">

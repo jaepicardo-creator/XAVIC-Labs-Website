@@ -6,6 +6,12 @@ Official website for **XAVIC-Labs — eXperimental Autonomous Virtual Intelligen
 
 Founded and led by **Jae Picardo**. The laboratory researches intelligent digital assistants, automation, and human-AI collaboration, prioritizing adaptability, practical functionality, user control, and responsible automation.
 
+## V1.3 landing-page hero
+
+The homepage hero retains the official tagline and branding, with refined spacing, a subtle headline entrance, low-opacity grid/ambient lighting, and three orbital data points. The existing core adds cursor-reactive glow intensity and a decorative “SYSTEM ONLINE” indicator (not a claim of a connected AI backend). Both CTA targets are preserved: “Explore Projects” → portfolio and “Discover the Lab” → About. At 320px the controls stack without wrapping button labels.
+
+All new motion respects reduced-motion preferences. Pointer updates remain frame-throttled, with no continuous JavaScript animation loop; orbital data animation pauses off-screen. Run `node scripts/hero-smoke.mjs` against the production preview to check 1440px, 1024px, 390px, and 320px, CTA overlap/keyboard navigation, observed layout shift, reactive glow, and motion preferences. No dependencies, project content, brand assets, or contact behavior changed.
+
 ## V1.2 official logo integration
 
 The Founder-approved angular emblem is integrated as a transparent SVG, with a 1024px PNG, PNG favicon fallback, and horizontal wordmark. A shared accessible wordmark appears in the homepage header/footer and all five project detail pages. The AI core, project information, contact placeholders, and existing design remain unchanged. See [BRANDING.md](BRANDING.md) for the official palette, manual-trace fidelity limitations, generated assets, and branding verification commands.

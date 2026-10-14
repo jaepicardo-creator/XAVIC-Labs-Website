@@ -18,7 +18,8 @@ page.on("response", (response) => {
 });
 for (const [name, width, height] of [
   ["desktop", 1440, 1000],
-  ["tablet", 768, 1024],
+  ["tablet", 1024, 900],
+  ["compact-tablet", 768, 1024],
   ["mobile", 390, 844],
   ["small-mobile", 320, 720],
 ]) {
@@ -161,13 +162,11 @@ if (
     .evaluate((el) => getComputedStyle(el).animationName)) === "none"
 )
   throw new Error("Mobile animation missing");
-await touchPage
-  .locator(".hero-art")
-  .dispatchEvent("pointermove", {
-    pointerType: "touch",
-    clientX: 200,
-    clientY: 700,
-  });
+await touchPage.locator(".hero-art").dispatchEvent("pointermove", {
+  pointerType: "touch",
+  clientX: 200,
+  clientY: 700,
+});
 if (await touchPage.locator(".hero-art").getAttribute("data-interacting"))
   throw new Error("Touch should not enable cursor effects");
 await touch.close();

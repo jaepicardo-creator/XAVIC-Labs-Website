@@ -14,6 +14,7 @@ export default function AICore() {
     stage.current?.style.removeProperty("--core-x");
     stage.current?.style.removeProperty("--core-y");
     art.current?.removeAttribute("data-interacting");
+    art.current?.style.removeProperty("--core-energy");
   }
 
   useEffect(() => {
@@ -69,6 +70,10 @@ export default function AICore() {
     frame.current = requestAnimationFrame(() => {
       stage.current?.style.setProperty("--core-x", `${x}px`);
       stage.current?.style.setProperty("--core-y", `${y}px`);
+      art.current?.style.setProperty(
+        "--core-energy",
+        String(0.2 + Math.min(1, Math.hypot(x, y) / 8) * 0.6),
+      );
       art.current?.setAttribute("data-interacting", "true");
       frame.current = null;
     });
@@ -85,16 +90,28 @@ export default function AICore() {
       <div className="art-grid" />
       <div className="orbital-stage" ref={stage}>
         <div className="interaction-glow" />
-        <div className="orbit orbit-one" />
-        <div className="orbit orbit-two" />
-        <div className="orbit orbit-three" />
+        <div className="orbit orbit-one">
+          <div className="orbital-data-track">
+            <span className="orbital-point" />
+          </div>
+        </div>
+        <div className="orbit orbit-two">
+          <div className="orbital-data-track">
+            <span className="orbital-point" />
+          </div>
+        </div>
+        <div className="orbit orbit-three">
+          <div className="orbital-data-track">
+            <span className="orbital-point" />
+          </div>
+        </div>
         <div className="core">
           <Orbit size={92} strokeWidth={0.7} />
         </div>
       </div>
       <span className="art-label label-top">X / EXPERIMENTAL CORE</span>
       <span className="art-label label-bottom">
-        AI CORE / VISUAL <span className="status-dot" />
+        SYSTEM ONLINE <span className="status-dot" />
       </span>
       <span className="coordinate">XAVIC / NEURAL STUDY</span>
     </div>

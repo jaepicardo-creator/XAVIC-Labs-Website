@@ -24,6 +24,14 @@ describe("XAVIC-Labs website", () => {
       screen.getByRole("link", { name: /Explore Projects/ }),
     ).toHaveAttribute("href", "#projects");
     expect(
+      screen.getByRole("link", { name: /Discover the Lab/ }),
+    ).toHaveAttribute("href", "#about");
+    expect(
+      screen.getByText(
+        "An independent AI development laboratory engineering intelligent, adaptive, and practical systems that enhance productivity, creativity, and everyday life.",
+      ),
+    ).toBeInTheDocument();
+    expect(
       screen.getByRole("heading", { name: "Jae Picardo." }),
     ).toBeInTheDocument();
     expect(
