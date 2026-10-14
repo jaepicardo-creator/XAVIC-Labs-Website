@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import BrandEmblem from "./BrandEmblem";
+import BrandWordmark from "./BrandWordmark";
 const links = [
   ["About", "about"],
   ["Projects", "projects"],
@@ -12,11 +12,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="header">
-      <a href="#" className="brand" aria-label="XAVIC-Labs home">
-        <BrandEmblem />
-        XAVIC
-        <span className="muted">/ LABS</span>
-      </a>
+      <BrandWordmark />
       <nav
         id="primary-navigation"
         aria-label="Main navigation"

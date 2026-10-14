@@ -1254,3 +1254,11 @@ p {
     opacity: 0.4;
   }
 }
+
+/* V1.2: project-page identity; existing homepage and AI-core styles unchanged. */
+.project-branding {
+  padding-top: 28px;
+}
+.project-branding + .project-page {
+  padding-top: 28px;
+}

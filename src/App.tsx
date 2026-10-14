@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import AICore from "./components/AICore";
-import BrandEmblem from "./components/BrandEmblem";
+import BrandWordmark from "./components/BrandWordmark";
 import Header from "./components/Header";
 import SectionTitle from "./components/SectionTitle";
 import ProjectCard from "./components/ProjectCard";
@@ -339,11 +339,7 @@ export default function App() {
         </section>
       </main>
       <footer className="container footer">
-        <a className="brand" href="#">
-          <BrandEmblem />
-          XAVIC
-          <span className="muted">/ LABS</span>
-        </a>
+        <BrandWordmark />
         <span>© {new Date().getFullYear()} XAVIC-Labs</span>
         <span className="footer-note">
           STAY CURIOUS. KEEP BUILDING. <span className="status-dot" />

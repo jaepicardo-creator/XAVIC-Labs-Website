@@ -44,6 +44,13 @@ describe("XAVIC-Labs website", () => {
       screen.getByRole("heading", { name: project.name, level: 1 }),
     ).toBeInTheDocument();
     expect(screen.getByText(project.status)).toBeInTheDocument();
+    expect(
+      screen.getAllByRole("link", { name: "XAVIC-Labs home" }),
+    ).toHaveLength(2);
+    for (const logo of document.querySelectorAll<HTMLImageElement>(
+      "img.brand-mark",
+    ))
+      expect(logo.getAttribute("src")).toBe("../../xavic-emblem.svg");
     expect(screen.getByText(project.description)).toBeInTheDocument();
     expect(
       screen.getByRole("link", { name: /Back to projects/ }),
@@ -56,9 +63,7 @@ describe("XAVIC-Labs website", () => {
       "aria-expanded",
       "true",
     );
-    fireEvent.click(
-      screen.getByRole("link", { name: "Projects" }),
-    );
+    fireEvent.click(screen.getByRole("link", { name: "Projects" }));
     expect(screen.getByRole("button", { name: "Open menu" })).toHaveAttribute(
       "aria-expanded",
       "false",

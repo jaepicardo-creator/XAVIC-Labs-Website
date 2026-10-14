@@ -6,6 +6,10 @@ Official website for **XAVIC-Labs — eXperimental Autonomous Virtual Intelligen
 
 Founded and led by **Jae Picardo**. The laboratory researches intelligent digital assistants, automation, and human-AI collaboration, prioritizing adaptability, practical functionality, user control, and responsible automation.
 
+## V1.2 official logo integration
+
+The Founder-approved angular emblem is integrated as a transparent SVG, with a 1024px PNG, PNG favicon fallback, and horizontal wordmark. A shared accessible wordmark appears in the homepage header/footer and all five project detail pages. The AI core, project information, contact placeholders, and existing design remain unchanged. See [BRANDING.md](BRANDING.md) for the official palette, manual-trace fidelity limitations, generated assets, and branding verification commands.
+
 ## V1.1 visual identity
 
 The shared geometric SVG emblem in `public/xavic-emblem.svg` is used by the wordmark and favicon. The orbital AI core uses CSS transform/opacity animations and frame-throttled desktop pointer movement. Touch devices retain automatic lightweight animation; reduced-motion preferences disable cursor movement, orbit animation, pulse, and animated glow. Animation pauses when the core is off-screen or the document is hidden.

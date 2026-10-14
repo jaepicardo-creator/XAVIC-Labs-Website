@@ -1,4 +1,4 @@
-# XAVIC-Labs V1.1 implementation review
+# XAVIC-Labs V1.2 implementation review
 
 Branch: `development/xavic-website`, based on `main` commit `ffdfe58e43d80954a15f3f719fe591773c222147`.
 
@@ -39,3 +39,11 @@ V1.0 was pushed to the development branch; V1.1 is prepared for a normal push to
 ## V1.1 changed files
 
 `public/xavic-emblem.svg`, `src/components/BrandEmblem.tsx`, `src/components/AICore.tsx`, `src/components/AICore.test.tsx`, `src/components/Header.tsx`, `src/App.tsx`, `src/style.css`, `index.html`, `scripts/generate-pages.mjs`, `scripts/browser-smoke.mjs`, `package.json`, `package-lock.json`, `README.md`, and `REVIEW.md`. Package/lockfile changes only identify release 1.1.0. Existing screenshots and ZIP archive remain untracked and are excluded from this commit.
+
+## V1.2 official branding integration
+
+Replaces the provisional V1.1 emblem with a manual silhouette trace of the Founder-approved image. Transparent SVG, 1024px PNG, 32px PNG favicon, and horizontal SVG are included. A shared accessible wordmark is used in the header, footer, and five project pages. See BRANDING.md for fidelity limitations: this is not a pixel-exact recreation of the raster shading.
+
+Validation: all 13 automated tests passed, production build generated all five static project pages, and browser checks passed. Branding inspection covered all six pages at 1440px, 768px, 390px, and 320px, loaded SVG/PNG favicons, 16/32/64/256px rendering, two accessible home links per page, and zero overflow or console/runtime/HTTP errors. Existing core interaction, animation preferences, navigation, and disabled contact preview passed unchanged. No dependencies or project data changed.
+
+V1.2 commits only branding assets, branding components/integration, branding-specific tests/generation, release version metadata, and documentation. Previous screenshots/ZIP remain untracked. A normal push updates Draft PR #1; no merge or public deployment is authorized.

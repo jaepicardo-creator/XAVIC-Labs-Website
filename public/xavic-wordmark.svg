@@ -1,0 +1,52 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 390 96"
+  role="img"
+  aria-labelledby="wordmark-title"
+>
+  <title id="wordmark-title">XAVIC-Labs</title>
+  <svg width="96" height="96" viewBox="0 0 960 960">
+    <title id="title">XAVIC-Labs official emblem</title>
+    <defs>
+      <linearGradient
+        id="official-spectrum"
+        x1="0"
+        y1="131"
+        x2="0"
+        y2="1037"
+        gradientUnits="userSpaceOnUse"
+      >
+        <stop stop-color="#57E4E8" />
+        <stop offset=".5" stop-color="#477FE8" />
+        <stop offset="1" stop-color="#9585F5" />
+      </linearGradient>
+    </defs>
+    <path
+      transform="translate(-143 -104)"
+      fill="url(#official-spectrum)"
+      d="M1007 131V375L754 644L885 764V1001L579 729L617 688L833 884V793L678 652L956 351V257L239 1037V801L405 626L303 536V314L572 543L537 581L359 422V514L480 623L288 831V919Z"
+    />
+  </svg>
+  <text
+    x="115"
+    y="60"
+    fill="#EAF2FF"
+    font-family="system-ui,sans-serif"
+    font-size="32"
+    font-weight="750"
+    letter-spacing="2"
+  >
+    XAVIC
+  </text>
+  <text
+    x="245"
+    y="59"
+    fill="#EAF2FF"
+    opacity=".7"
+    font-family="system-ui,sans-serif"
+    font-size="20"
+    letter-spacing="1"
+  >
+    / LABS
+  </text>
+</svg>

@@ -21,6 +21,7 @@ for (const project of projects) {
   const html = rootHtml
     .replaceAll("./assets/", "../../assets/")
     .replaceAll('href="./xavic-emblem.svg"', 'href="../../xavic-emblem.svg"')
+    .replaceAll('href="./favicon.png"', 'href="../../favicon.png"')
     .replace(
       /<title>[\s\S]*?<\/title>/,
       `<title>${escape(project.name)} | XAVIC-Labs</title>`,

@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import BrandWordmark from "./BrandWordmark";
 import type { Project } from "./ProjectCard";
 export default function ProjectPage({ project }: { project: Project }) {
   return (
@@ -6,6 +7,9 @@ export default function ProjectPage({ project }: { project: Project }) {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <div className="container project-branding">
+        <BrandWordmark href="../../" />
+      </div>
       <main id="main" className="container project-page">
         <a className="text-link" href="../../#projects">
           ← Back to projects
@@ -45,6 +49,10 @@ export default function ProjectPage({ project }: { project: Project }) {
           Connect with the lab <ArrowUpRight size={18} />
         </a>
       </main>
+      <footer className="container footer">
+        <BrandWordmark href="../../" />
+        <span>© {new Date().getFullYear()} XAVIC-Labs</span>
+      </footer>
     </>
   );
 }
