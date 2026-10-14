@@ -116,11 +116,6 @@ export default function App() {
                 Intelligence with purpose<span>.</span>
               </h2>
             </div>
-            <p>
-              Founded and led by
-              <br />
-              <strong>Jae Picardo</strong>
-            </p>
           </div>
           <p className="about-intro">
             XAVIC-Labs — eXperimental Autonomous Virtual Intelligence Core — is
