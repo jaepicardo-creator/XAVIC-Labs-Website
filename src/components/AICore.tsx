@@ -1,5 +1,5 @@
 import { useEffect, useRef, type PointerEvent } from "react";
-import { Orbit } from "lucide-react";
+import BrandEmblem from "./BrandEmblem";
 
 /** Pointer updates are coalesced into one frame without re-rendering React. */
 export default function AICore() {
@@ -106,7 +106,7 @@ export default function AICore() {
           </div>
         </div>
         <div className="core">
-          <Orbit size={92} strokeWidth={0.7} />
+          <BrandEmblem className="core-emblem" size={82} />
         </div>
       </div>
       <span className="art-label label-top">X / EXPERIMENTAL CORE</span>

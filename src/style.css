@@ -1429,3 +1429,10 @@ p {
     transform: none;
   }
 }
+
+/* Keep the approved emblem upright inside the existing tilted core. */
+.hero-art .core-emblem {
+  width: 82px;
+  height: 82px;
+  transform: rotate(15deg);
+}
